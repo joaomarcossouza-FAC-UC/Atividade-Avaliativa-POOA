@@ -10,7 +10,7 @@ public class RelatorioSingleton {
 	
 	private RelatorioSingleton() {}
 	
-	public static RelatorioSingleton getInstance() {
+	public static synchronized RelatorioSingleton getInstance() {
 		if(instancia==null) {
 			instancia = new RelatorioSingleton();
 		}return instancia;
@@ -18,7 +18,7 @@ public class RelatorioSingleton {
 	
 	//fazer uma sincronização para as threads serem acumuladas com synchronized
 	public synchronized void adicionarDados(String produto, double valor, int quantidade) {
-	    System.out.println("Recebendo: " + produto + " | valor: " + valor + " | qtd: " + quantidade);
+		 System.out.println("Recebendo: " + produto + " [ valor: ] " + valor + " [ qtd: ] " + quantidade);
 	    valorTotalVendido += valor * quantidade;
 	    quantidadeTotalItens += quantidade;
 	    if(quantidade > maiorQuantidade) {

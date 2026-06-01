@@ -15,7 +15,7 @@ public class VendaThread implements Runnable{
 
 	@Override
 	public void run() {
-		System.err.println(Thread.currentThread().getName()+ " processando "+vendas.size()+ " vendas... ");
+		System.out.println(Thread.currentThread().getName()+ " processando "+vendas.size()+ " vendas... ");
 		processos.processar(vendas);
 		System.out.println(Thread.currentThread().getName()+ "finalizado");
 		

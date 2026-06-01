@@ -15,9 +15,6 @@ public class Main {
 		//caminho do arquivo
 		String caminho = "src/dados/vendas.CSV";
 		
-		System.out.println(new java.io.File(caminho).getAbsolutePath());
-		System.out.println(new java.io.File(caminho).exists());
-		
 		
 		
 		// leitura do arquivo
@@ -25,8 +22,9 @@ public class Main {
         LeitorCSV leitor = new LeitorCSV(caminho);
         List<Venda> vendas = leitor.lerArquivos();
         System.out.println("Total de vendas carregadas: " + vendas.size());
+        
 
-        // 2. Processa as vendas com múltiplas threads
+        // Processar as vendas com as threads
         System.out.println("\nIniciando processamento paralelo...");
         RelatorioService service = new RelatorioService();
         try {
