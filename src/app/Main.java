@@ -15,8 +15,6 @@ public class Main {
 		//caminho do arquivo
 		String caminho = "src/dados/vendas.CSV";
 		
-		
-		
 		// leitura do arquivo
         System.out.println("Lendo arquivo...");
         LeitorCSV leitor = new LeitorCSV(caminho);
@@ -33,7 +31,7 @@ public class Main {
             System.out.println(" processamento apresenta falhas: " + e.getMessage());
         }
 
-        // 3. Exibe o relatório final via Singleton
+        // Exibir o relatório final via Singleton
         RelatorioSingleton.getInstance().exibirRelatorio();
 	}
 
