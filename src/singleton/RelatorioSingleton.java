@@ -17,14 +17,15 @@ public class RelatorioSingleton {
 	}
 	
 	//fazer uma sincronização para as threads serem acumuladas com synchronized
-		public synchronized void adicionarDados(String produto, double valor, int quantidade) {
-			valorTotalVendido += valor * quantidade;
-			quantidadeTotalItens += quantidade;
-			if(quantidade >  maiorQuantidade) {
-				maiorQuantidade = quantidade;
-				produtoMaisVendido = produto;
-			}
-		}
+	public synchronized void adicionarDados(String produto, double valor, int quantidade) {
+	    System.out.println("Recebendo: " + produto + " | valor: " + valor + " | qtd: " + quantidade);
+	    valorTotalVendido += valor * quantidade;
+	    quantidadeTotalItens += quantidade;
+	    if(quantidade > maiorQuantidade) {
+	        maiorQuantidade = quantidade;
+	        produtoMaisVendido = produto;
+	    }
+	}
 
 		
 		public void exibirRelatorio() {

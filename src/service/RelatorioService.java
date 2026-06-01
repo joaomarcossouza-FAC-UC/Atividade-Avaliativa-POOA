@@ -18,7 +18,7 @@ public class RelatorioService {
 			
 			for(int i = 0; i < NUM_THREADS; i++) {
 				//inicio e fim do bloco
-				int inicio = 1*tamanhoBlocos;
+				int inicio = i*tamanhoBlocos;
 				int fim = Math.min(inicio + tamanhoBlocos,vendas.size());
 				//evita criar threads vazias
 				if(inicio >= vendas.size()) break;
