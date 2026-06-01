@@ -1,0 +1,9 @@
+id,produto,categoria,valor,quantidade
+1,Notebook,Eletronico,3500.00,100
+2,Mouse,Periferico,80.00,51
+3,Teclado,Periferico,150.00,8
+4,Monitor,Eletronico,1200.00,13
+5,Headset,Periferico,250.00,40
+6,Webcam,Periferico,180.00,22
+7,SSD,Eletronico,400.00,34
+8,Smartphone,Eletronico,2800.00,10
