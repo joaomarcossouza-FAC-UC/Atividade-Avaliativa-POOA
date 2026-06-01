@@ -13,7 +13,7 @@ public class Main {
 	public static void main(String[] args) {
 		
 		//caminho do arquivo
-		String caminho = "src/dados/vendas.CSV";
+		String caminho = "src/dados/ecommerce_sales_1000_records.csv";
 		
 		// leitura do arquivo
         System.out.println("Lendo arquivo...");

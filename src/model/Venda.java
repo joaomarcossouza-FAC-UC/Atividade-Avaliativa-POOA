@@ -1,26 +1,21 @@
 package model;
 	public class Venda {
-		private int id;
+		private String orderId;
 		private String produto;
 		private String categoria;
 		private double valor;
 		private int quantidade;
+		private String cidade;
+		private String data;
 		
-		
-		public Venda(int id,String produto,String categoria,double valor,int quantidade) {
+		public Venda(String orderId,String produto,String categoria,double valor,int quantidade,String data,String cidade) {
 			this.categoria = categoria;
-			this.id = id;
+			this.orderId = orderId;
 			this.produto = produto;
 			this.quantidade = quantidade;
 			this.valor = valor;
-		}
-
-		public int getId() {
-			return id;
-		}
-
-		public void setId(int id) {
-			this.id = id;
+			this.cidade = cidade;
+			this.data = data;
 		}
 
 		public String getProduto() {
@@ -54,10 +49,36 @@ package model;
 		public void setQuantidade(int quantidade) {
 			this.quantidade = quantidade;
 		}
+		
+		public String getOrderId() {
+			return orderId;
+		}
+
+		public void setOrderId(String orderId) {
+			this.orderId = orderId;
+		}
+
+		public String getCidade() {
+			return cidade;
+		}
+
+		public void setCidade(String cidade) {
+			this.cidade = cidade;
+		}
+
+		public String getData() {
+			return data;
+		}
+
+		public void setData(String data) {
+			this.data = data;
+		}
 
 		@Override
 		public String toString() {
-			return "Venda [id=" + id + ", produto=" + produto + ", categoria=" + categoria + ", valor=" + valor
-					+ ", quantidade=" + quantidade + "]";
+			return "Venda [OrderId=" + orderId + ", produto=" + produto + ", categoria=" + categoria + ", valor="
+					+ valor + ", quantidade=" + quantidade + ", cidade=" + cidade + ", data=" + data + "]";
 		}
+
+	
 }

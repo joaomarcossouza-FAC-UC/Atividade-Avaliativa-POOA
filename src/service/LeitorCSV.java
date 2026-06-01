@@ -23,13 +23,15 @@ import model.Venda;
 								continue;
 							}
 							String[]valores = linha.split(",");
-							int id = Integer.parseInt(valores[0].trim());
+							String orderId = valores[0].trim();
 							String produto = valores[1].trim();
 							String categoria = valores[2].trim();
 							double valor = Double.parseDouble(valores[3].trim());
-							int quantidade = Integer.parseInt(valores[4].trim());
+							int quantidade = (int) Double.parseDouble(valores[4].trim());
+							String cidade = valores[5].trim();
+							String data = valores[6].trim();
 							
-							vendas.add(new Venda(id, produto,categoria,valor,quantidade));
+							vendas.add(new Venda(orderId, produto, categoria, valor, quantidade, data, cidade));
 						}
 				}catch (IOException e) {
 					System.out.println("O Arquivo não pode ser Lido:"+ e.getMessage());
